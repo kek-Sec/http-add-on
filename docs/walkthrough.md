@@ -42,7 +42,7 @@ kubectl apply -n $NAMESPACE -f examples/v0.8.0/httpscaledobject.yaml
 You've now installed a web application and activated autoscaling by creating an `HTTPScaledObject` for it. For autoscaling to work properly, HTTP traffic needs to route through the `Service` that the add-on has set up. You can use `kubectl port-forward` to quickly test things out:
 
 ```console
-kubectl port-forward svc/keda-http-add-on-interceptor-proxy -n ${NAMESPACE} 8080:8080
+kubectl port-forward svc/keda-add-ons-http-interceptor-proxy -n ${NAMESPACE} 8080:8080
 ```
 
 ### Routing to the Right `Service`
